@@ -16,4 +16,11 @@ TEST(can_reduce_fraction) {
 	VERIFY_EQ(3, fraction.second);
 }
 
+TEST(can_reduce_egyptian_fraction) {
+	auto egyptian = egyptian_fraction(75, 45);
+	auto fraction = reduce_egyptian_fraction(egyptian);
+	VERIFY_EQ(5, fraction.first);
+	VERIFY_EQ(3, fraction.second);
+}
+
 TESTFIXTURE(egyptianfrac)
